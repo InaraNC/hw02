@@ -19,7 +19,7 @@
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$ic03561$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -47,14 +47,29 @@
     $y=\sqrt{x}$
   \end{center}
 
-  \begin{solution}
+  \begin{solution}\\
     % Write your solution here
+    Partial:\\
+    domain: $Z$ all integers\\
+    co-domain: $R$ set of all real numbers\\
+    set of values for the following function to be partial, the $domain$ $of$ $definition$ $of$ $f$ would be : $Z+$ all positive integers\\
+    \\
+    Total:\\
+    domain: $Z+$ all positive integers\\
+    co-domain: $R$ set of all real numbers \\
+    set of values for the following function to be partial, the $domain$ $of$ $definition$ $of$ $f$ would be : $Z+$ all positive integers\\
+    
+    
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
     % Write your solution here
+    For $f$ to be a function:\\
+    $f : A \longrightarrow B$, $f(a)=b$ is the unique element of B assigned by a function f to the element of A.\\
+    \\
+    In this case $f$ assigns an input bit string, the smallest index (which is an integer value) of '1' and assigns a 0 to an empty string. However for an input bit string with all zeros, the function remains undefined, that is it does not assign S a value at all. Therefore $f$ is not a function as it does not satisfy the definition of a function. 
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -66,6 +81,18 @@
 
   \begin{solution}
     % Write your solution here
+    For a set to be an equivalence relation, it must be reflexive, symmetric and transitive.\\
+    \\
+    
+    \begin{subparts}
+    \subpart  $X$ can be in a class by itself and $Y$ can be in a class by itself (reflexive). Since $X$ and $Y$ have been in class together, it automatically implies that $X$ has been in class with $Y$  and $Y$ has been in class with $X$ (Symmetric). However there should be a third person $Z$ such that $X$ is in class with $Z$ and $Z$ is in class with $Y$ for the transitive property of $X$ is in class with $Y$ to hold. Therefore it is not a equivalent relation.
+    \subpart $X$ rhymes with itself and $Y$  with itself (reflexive). Since $X$ and $Y$ rhyme it automatically implies that $X$ rhymes with $Y$ and $Y$ rhymes with $X$ (transitive). A third word $Z$ is such that $X$ rhymes with $Z$ and $Z$ rhymes with $Y$ so $X$ and $Y$ rhyme. Therefore it is an equivalence relation
+    
+    \subpart   $X$ can be a subset of itself and $Y$ can be a subset of itself (reflexive), $X$ is a subset of $Y$ but $Y$ is not a subset of S, which is not symmetric. We do not need to check further. Therefore it is not an equivalence relation.
+    
+  \end{subparts}
+
+    
   \end{solution}
 
 \end{parts}
@@ -74,6 +101,15 @@
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
     % Write your solution here
+    Definition of function= \\
+    $f(a) = b $ such that there exits an a $\in A$ where f(a)=b 
+    $f^{-1}(B) = a$ such that $a \in A , f(a) \in B $\\
+    Since f(A) = B, b $\in f(A) $ and since we know that  $a \in f^{-1}(B) $\\ Therefore from definition it is proved that f(a)=b
+    
+    
+    
+    
+    
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -89,7 +125,11 @@
 
   \begin{solution}
     % Write your solution here
-  \end{solution}
+    When n=3, the power set of $[n]$ is ${\emptyset}$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1,2\}$, $\{1,3\}$, $\{2,3\}$, $\{1,2,3\}$. \\
+    As we can see above $A \subseteq$ of the power set and $B \subseteq$ of the power set. A contains all the elements with an even cardinality and B contains all the elements with an odd cardinality. Thus, for example if $x \in A$ and $y \in B$ then $x \neq y$ because they will never have the same cardinality and never be repeated as a set cannot have the same elements.\\
+    For it to be a bijection, we need to prove that A and B are injective (one to one) and surjective (onto).\\ For f to be injective, we know that $\forall a \forall b ((a \neq b) \implies f(a) \neq f(b))$ , which is being satisfied by the example above where $n=3$. For f to be surjective, we know that $\forall y \exists x(f(x)=y) $ which is also being satisfied by the example above.  Therefore we know that it is a bijection.\\
+    As we know that the cardinality of a power set is $2^n$, we can observe that the power set contains equal number of elements with even cardinality and odd cardinality. Since we have proved above that it is  a bijection, and we know that A and B have equal number of elements (as mentioned above) we have proved that  $|A| = |B|$ 
+    \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
 
@@ -122,10 +162,29 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
     % Write your solution here
-  \end{solution}
+    Capwidth= $M_1=2, M_2=3, M_3=4, M_4=5, M_5=6$, therefore Capwidth $M_n=(n+1)$\\
+    StemHeight= $M_1=0, M_2=1, M_3=2, M_4=3, M_5=4$, therefore StemHeight $M_n=(n-1)$.\\
+    CapHeight= $\lceil$ (Capwidth/2) $\rceil$\\ $M_1= 1, M_2= 2, M_3=2, M_4=3, M_5=3,$ therefore CapHeight $M_n= $ $\lceil$ ((n+1)/2) $\rceil$\\
+    The mushroom caps look like trapeziums therefore to find the area of the trapezium= 1/2 * h * (sum of parallel sides)\\
+    h = CapHeight = $\lceil$ ((n+1)/2) $\rceil$
+    sum of parallel side= $p_1$ + $p_2$\\
+    $p_1$= Capwidth = (n+1)\\
+    $p_2$=Capwidth-(CapHeight-1) = (n+1)- ($\lceil$ ((n+1)/2) $\rceil$-1)\\
+    Therefore:\\
+    Number of dots in the Mushroom caps = 1/2 * $\lceil$ ((n+1)/2) $\rceil$ * (2n + 3 - $\lceil$ ((n+1)/2) $\rceil$)\\
+    Number of dots in the stem= 2 * StemHeight = 2(n-1) \\
+    Therefore the formula is:\\
+    ( 1/2 * $\lceil$ ((n+1)/2) $\rceil$ * (2n + 3 - $\lceil$ ((n+1)/2) $\rceil$)))) + 2(n-1) 
+    
+    
+    
+    \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
     % Write your solution here
+    CapHeight = $\lceil$ ((n+1)/2) $\rceil$ = $\lceil$ ((20+1)/2) $\rceil$ = 11\\
+    StemHeight = (n-1) = (20-1) = 19\\
+    TotalHeight = 11 + 19 = 30
   \end{solution}
 \end{parts}
 
@@ -154,11 +213,33 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
  
     \begin{solution}
     % Write your solution here
+    An infinite series is countable if and only if it has the same cardinality as the set of positive integers.
+    To prove that a fibonacci sequence is countable, we assign the rows and columns of the 2D array the value of postive integers for example: \\
+    \begin{center}
+    
+    \begin{tabular}{c c c c c c c c}
+    & 0 & 1 & 2 & 3 & $\cdots$ & $Z+$\\ 
+    0 & \cellcolor{blue!25}1 & 2 & 3 & 5 & $\cdots$\\
+    1 & 4 & \cellcolor{blue!25}7 & 11 & 18 & $\cdots$\\
+    2 & 6 & 10 & \cellcolor{blue!25}16 & 26 & $\cdots$\\
+ 
+    $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
+    \end{tabular}
+    \end{center}
+
+    In this way we can refer to the Fibonacci sequence in an ordered pair of infinite integers.\\ 
+    For example F(0,2)=F(0,0)+F(0,1) and so on.
+    This will also be one to one as each ordered pair will correspond to only one value in the table and will also be onto as each value in the array will have an ordered pair. Since it is both one to one and onto, this means that the cardinality of n=both the sequence and the integers will be the same therefore proved that it is countable. 
+ 
+
+    
+    
   \end{solution}
   \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
 
   \begin{solution}
     % Write your solution here
+    If for example the diagonal is replaced by $N^k$ which and the number is not present in the row, it means that there is a bijection mapping going on with. This means that unique elements will be mapped and the cardinality would be the same. Thus proved that the method is countable 
   \end{solution}
 \end{parts}
 
